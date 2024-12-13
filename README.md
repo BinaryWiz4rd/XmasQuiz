@@ -1,3 +1,4 @@
+dzialaj
 Create a mobile app in Kotlin that: 
 1. Randomly generates Christmas greetings  
 2. Suggests random Christmas gifts. 
