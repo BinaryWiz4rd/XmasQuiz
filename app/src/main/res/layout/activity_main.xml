@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/christmas_background"
+    tools:context=".MainActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Christmas Countdown 2024"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Calendar Grid -->
+    <GridLayout
+        android:id="@+id/calendarGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:rowCount="5"
+        android:columnCount="7"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <!-- Buttons for the calendar -->
+        <!-- Add 31 Buttons for days of December dynamically in code -->
+    </GridLayout>
+
+    <!-- Generate Greeting Button -->
+    <Button
+        android:id="@+id/btnGenerateGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarGrid"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Generate Greeting"
+        android:textColor="@android:color/white"/>
+
+    <!-- Generate Gift Button -->
+    <Button
+        android:id="@+id/btnGenerateGift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGenerateGreeting"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Generate Gift"
+        android:textColor="@android:color/white"/>
+
+    <!-- Display Area -->
+    <TextView
+        android:id="@+id/displayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGenerateGift"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+    <!-- Grinch Animation Placeholder -->
+    <ImageView
+        android:id="@+id/grinchImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/displayText"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:src="@drawable/grinch"/>
+
+    <!-- List/History Section -->
+    <ListView
+        android:id="@+id/historyList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grinchImage"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+</RelativeLayout>
